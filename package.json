@@ -1,0 +1,31 @@
+{
+  "name": "episode-04-talk-is-cheap-show-me-the-code",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshi-durgesh/Episode-04-Talk-is-cheap-show-me-the-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshi-durgesh/Episode-04-Talk-is-cheap-show-me-the-code/issues"
+  },
+  "homepage": "https://github.com/joshi-durgesh/Episode-04-Talk-is-cheap-show-me-the-code#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist": [
+    "last 2 version"
+  ]
+}
