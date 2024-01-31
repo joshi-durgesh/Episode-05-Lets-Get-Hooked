@@ -12,13 +12,13 @@ const RestaurantCard = ({ resData }) => {
       </div>
       <div className='resto-detail-container'>
         <h3 className='resto-name overflow-text'>{name}</h3>
-        <div>
-          <span className='bi bi-star-fill'></span>&nbsp;
-          {avgRating} <span className='bi bi-dot'></span>
+        <div className='resto-rating'>
+          <span className='bi bi-star-fill star'></span>&nbsp;
+          {avgRating} <span className='bi bi-dot dot'></span>
           &nbsp; {slaString}
         </div>
-        <div className='overflow-text'>{cuisines.join(",")}</div>
-        <div>{areaName}</div>
+        <div className='overflow-text resto-cuisine'>{cuisines.join(",")}</div>
+        <div className='resto-area'>{areaName}</div>
       </div>
     </a>
   );
