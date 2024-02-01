@@ -22,6 +22,7 @@ const TopBrandsSection = () => {
         ?.restaurants;
     SetTopBrands(brands);
     SetAllBrands(brands);
+    console.log(brands);
   };
 
   return TopBrands.length === 0 ? (

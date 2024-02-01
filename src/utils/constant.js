@@ -5,4 +5,4 @@ export const LOGO_URL =
   "https://media.licdn.com/dms/image/D4D12AQEIzjsnAcFihA/article-cover_image-shrink_600_2000/0/1686565903056?e=2147483647&v=beta&t=YAD0iYLqVjQrcyF8olEYbSqqS1F5RplF5iXL0xI71F8";
 
 export const SWIGGY_API =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.487739974955158&lng=78.38145008147583&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+  "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D17.487739974955158%26lng%3D78.38145008147583%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING";
