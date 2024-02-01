@@ -1,7 +1,7 @@
 //Importing React in our JavaScript
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 //components
 import Header from "./component/Header";
@@ -12,6 +12,8 @@ import Search from "./component/Search";
 import Help from "./component/Help";
 import SignIn from "./component/SignIn";
 import Cart from "./component/Cart";
+import ErrorPage from "./component/ErrorPage";
+import RestaurantMenu from "./component/RestaurantMenu";
 
 const Body = () => {
   return (
@@ -26,7 +28,8 @@ const MainContent = () => {
   return (
     <React.Fragment>
       <Header />
-      <Body />
+      {/* Outlet is used for replacing children according to the link */}
+      <Outlet />
     </React.Fragment>
   );
 };
@@ -35,26 +38,37 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <MainContent />,
-  },
-  {
-    path: "/offers",
-    element: <Offers />,
-  },
-  {
-    path: "/search",
-    element: <Search />,
-  },
-  {
-    path: "/help",
-    element: <Help />,
-  },
-  {
-    path: "/signin",
-    element: <SignIn />,
-  },
-  {
-    path: "/cart",
-    element: <Cart />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/offers",
+        element: <Offers />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
+      },
+      {
+        path: "/help",
+        element: <Help />,
+      },
+      {
+        path: "/signin",
+        element: <SignIn />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
+      },
+    ],
   },
 ]);
 

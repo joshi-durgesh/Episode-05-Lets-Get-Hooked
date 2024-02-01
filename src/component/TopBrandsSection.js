@@ -22,7 +22,6 @@ const TopBrandsSection = () => {
         ?.restaurants;
     SetTopBrands(brands);
     SetAllBrands(brands);
-    console.log(brands);
   };
 
   return TopBrands.length === 0 ? (
@@ -73,7 +72,11 @@ const TopBrandsSection = () => {
       </div>
       <div className='top-brand-container'>
         {TopBrands.map((brandData) => (
-          <RestaurantCard key={brandData.info.id} resData={brandData} />
+          <RestaurantCard
+            key={brandData.info.id}
+            resId={brandData.info.id}
+            resData={brandData}
+          />
         ))}
       </div>
     </section>

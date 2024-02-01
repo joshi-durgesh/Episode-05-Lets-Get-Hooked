@@ -1,12 +1,13 @@
 import { CDN_URL } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ resData }) => {
-  const { cloudinaryImageId, name, avgRating, cuisines, sla, areaName } =
+  const { cloudinaryImageId, name, avgRating, cuisines, sla, areaName, id } =
     resData?.info;
   const { slaString } = sla;
 
   return (
-    <a className='resto-card' href=''>
+    <Link className='resto-card' to={"/restaurant/" + id}>
       <div className='resto-img-container'>
         <img className='resto-card-img' src={CDN_URL + cloudinaryImageId} />
       </div>
@@ -20,7 +21,7 @@ const RestaurantCard = ({ resData }) => {
         <div className='overflow-text resto-cuisine'>{cuisines.join(",")}</div>
         <div className='resto-area'>{areaName}</div>
       </div>
-    </a>
+    </Link>
   );
 };
 
